@@ -1,118 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
+/* --- Global --- */
+* { margin:0;
+   padding:0; 
+   box-sizing:border-box; 
+   font-family: 'Segoe UI', sans-serif;
+  }
 :root {
-  --dark-bg: #141414;
-  --darker-bg: #050505;
-  --accent: #2462e9;
-  --accent-glow: rgb(65, 141, 255);
-  --text: #ffffff;
+  --dark-bg:#141414; --darker-bg:#050505; --accent:#2462e9; --accent-glow:rgb(65,141,255); --text:#fff;
 }
+body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow-x:hidden; }
 
-body {
-  background-color: var(--dark-bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
 
 /* ======================================
    NAVBAR
 ====================================== */
-.navbar {
-  width: 100%;
-  padding: 15px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #111;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
+.navbar { 
+  display:flex; 
+  justify-content:space-between;
+  align-items:center; padding:15px 5%; 
+  background:#111; position:fixed; top:0; 
+  width:100%; z-index:1000;
 }
+.navbar .logo { color:#fff; 
+  text-decoration:none; font-weight:bold; font-size:1.2rem; }
+.nav-links { list-style:none; display:flex; gap:25px;}
+.nav-links li a { color:#fff; text-decoration:none; font-weight:500;}
+.nav-links a.active { color:var(--accent);}
+.nav-toggle { display:none; background:none; border:none; cursor:pointer; color:#fff; font-size:1.7rem;}
 
-.navbar .logo {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* Tombol Contact */
-.cta-button {
-  background: #00aaff;
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ========== HAMBURGER BUTTON ========== */
-.nav-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-  color: white;
-  font-size: 1.7rem;
-}
-
-/* ========== RESPONSIVE (Mobile) ========== */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  /* Sembunyikan menu awalnya */
+/* Hamburger & Responsive */
+@media(max-width:768px){
+  .nav-toggle { display:block; }
   .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 5%;
-    width: 90%;
-    background: #111;
-    display: none;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 15px;
+    display:none; flex-direction:column; position:absolute; top:70px; right:5%; width:90%; background:#111; padding:20px; border-radius:10px; gap:15px;
   }
-
-  /* Tampilkan saat aktif */
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* Contact Me pindah ke dalam menu */
-  .cta-button {
-    display: none;
-  }
-
-  .nav-links::after {
-    content: "Contact Me";
-    padding: 12px 15px;
-    text-align: center;
-    background: #00aaff;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #fff;
-  }
+  .nav-links.active { display:flex; }
 }
 
 /* ======================================
