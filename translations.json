@@ -1,0 +1,39 @@
+{
+  "id": {
+    "nav_home": "Beranda",
+    "nav_services": "Layanan",
+    "nav_experience": "Pengalaman",
+    "nav_certificate": "Sertifikat",
+    "nav_contact": "Kontak",
+
+    "hero_title": "Halo, Saya Ranggo",
+    "hero_desc": "Seorang IT Support & Fotografer yang siap membantu kebutuhan teknologi dan multimedia Anda.",
+
+    "skills_title": "My Best Services",
+    
+    "service_title": "Layanan Saya",
+
+    "certificate_title": "Sertifikat Saya",
+
+    "footer_text": "Terima kasih telah mengunjungi portofolio saya."
+  },
+
+  "en": {
+    "nav_home": "Home",
+    "nav_services": "Services",
+    "nav_experience": "Experience",
+    "nav_certificate": "Certificates",
+    "nav_contact": "Contact",
+
+    "hero_title": "Hello, I'm Ranggo",
+    "hero_desc": "An IT Support & Photographer ready to help with your technology and multimedia needs.",
+
+    "skills_title": "My Best Services",
+    
+    "service_title": "My Services",
+
+    "certificate_title": "My Certificates",
+
+    "footer_text": "Thank you for visiting my portfolio."
+  }
+}
