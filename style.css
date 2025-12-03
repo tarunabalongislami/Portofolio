@@ -13,23 +13,69 @@ body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow
 /* ======================================
    NAVBAR
 ====================================== */
+/* ================================
+   NAVBAR
+================================= */
 .navbar { 
-  display:flex; 
-  justify-content:space-between;
-  align-items:center; padding:15px 5%; 
-  background:#111; position:fixed; top:0; 
-  width:100%; z-index:1000;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%; 
+  background: #111; 
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000;
 }
-.navbar .logo { color:#fff; 
-  text-decoration:none; font-weight:bold; font-size:1.2rem; }
-.nav-links { list-style:none; display:flex; gap:25px;}
-.nav-links li a { color:#fff; text-decoration:none; font-weight:500;}
-.nav-links a.active { color:var(--accent);}
-.nav-toggle { display:none; background:none; border:none; cursor:pointer; color:#fff; font-size:1.7rem;}
 
-/* Hamburger & Responsive */
-@media(max-width:768px){
-  .nav-toggle { display:block; }
+.navbar .logo { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 1.2rem; 
+}
+
+.nav-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 25px;
+}
+
+.nav-links li a { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 500;
+}
+
+.nav-links a.active { 
+  color: var(--accent);
+}
+
+/* Tombol Contact */
+.nav-links li .cta-button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #00aaff;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hamburger */
+.nav-toggle { 
+  display: none; 
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  color: #fff; 
+  font-size: 1.7rem;
+}
+
+/* ================================
+   RESPONSIVE NAVBAR (Mobile)
+================================= */
+@media(max-width: 768px){
+  .nav-toggle { display: block; }
 
   .nav-links {
     flex-direction: column;
@@ -39,8 +85,8 @@ body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow
     width: 90%;
     background: #111;
     overflow: hidden;
-    max-height: 0;             /* awalnya tertutup */
-    transition: max-height 1s ease-in-out;
+    max-height: 0; /* awalnya tertutup */
+    transition: max-height 0.5s ease-in-out;
     border-radius: 10px;
     gap: 15px;
   }
@@ -48,7 +94,14 @@ body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow
   .nav-links.active {
     max-height: 500px; /* cukup tinggi untuk menampilkan semua menu */
   }
+
+  .nav-links li .cta-button {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
+
 
 
 /* ======================================
