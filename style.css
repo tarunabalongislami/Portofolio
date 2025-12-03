@@ -24,53 +24,95 @@ body {
    NAVBAR
 ====================================== */
 .navbar {
+  width: 100%;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
   position: fixed;
   top: 0;
-  width: 100%;
-  padding: 1.2rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(10, 10, 10, 0.95);
-  backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--accent);
+.navbar .logo {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .nav-links {
-  display: flex;
-  gap: 2rem;
   list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-.nav-links a {
-  color: var(--text);
+.nav-links li a {
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s ease;
-  position: relative;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.3s ease;
+/* Tombol Contact */
+.cta-button {
+  background: #00aaff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
+/* ========== HAMBURGER BUTTON ========== */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+/* ========== RESPONSIVE (Mobile) ========== */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Sembunyikan menu awalnya */
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    width: 90%;
+    background: #111;
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+  }
+
+  /* Tampilkan saat aktif */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Contact Me pindah ke dalam menu */
+  .cta-button {
+    display: none;
+  }
+
+  .nav-links::after {
+    content: "Contact Me";
+    padding: 12px 15px;
+    text-align: center;
+    background: #00aaff;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+  }
 }
 
 /* ======================================
