@@ -1,4 +1,4 @@
-// Hamburger menu
+// Hamburger toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -8,16 +8,16 @@ navToggle.addEventListener('click', () => {
 
 // Smooth scroll dengan offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener('click', function(e){
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const yOffset = -80; // tinggi navbar
+    if(target){
+      const yOffset = -80;
       const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      
-      // Tutup menu setelah klik di mobile
-      if (navLinks.classList.contains('active')) {
+      window.scrollTo({ top:y, behavior:'smooth' });
+
+      // tutup menu mobile
+      if(navLinks.classList.contains('active')){
         navLinks.classList.remove('active');
       }
     }
@@ -28,20 +28,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const sections = document.querySelectorAll("section");
 const navLinkItems = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", ()=>{
   let current = "";
-
-  sections.forEach(section => {
+  sections.forEach(section=>{
     const sectionTop = section.offsetTop - 100;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute("id");
-    }
+    if(pageYOffset >= sectionTop) current = section.getAttribute("id");
   });
-
-  navLinkItems.forEach(link => {
+  navLinkItems.forEach(link=>{
     link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
+    if(link.getAttribute("href") === "#" + current) link.classList.add("active");
   });
 });
