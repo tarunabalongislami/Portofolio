@@ -423,12 +423,12 @@ section { scroll-margin-top: 90px; }
   .profile-img {
     width: 280px;
     height: 280px;
-  }
-/* pastikan di atas 
+  } 
+   
   .nav-links {
     display: none;
   }
-*/
+   
   .logo {
     font-size: 1.5rem;
   }
