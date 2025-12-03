@@ -93,7 +93,7 @@ body {
     transition: max-height 0.5s ease-in-out;
     border-radius: 10px;
     gap: 15px;
-    z-index: 9999; /* pastikan di atas */
+    
   }
 
   .nav-links.active {
