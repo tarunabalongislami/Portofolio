@@ -50,8 +50,6 @@ body {
 
 /* Hamburger & Responsive */
 @media(max-width:768px){
-  .nav-toggle { display:block; }
-
   .nav-links {
     flex-direction: column;
     position: absolute;
@@ -60,16 +58,18 @@ body {
     width: 90%;
     background: #111;
     overflow: hidden;
-    max-height: 0;             /* awalnya tertutup */
+    max-height: 0;             
     transition: max-height 0.5s ease-in-out;
     border-radius: 10px;
     gap: 15px;
+    z-index: 9999; /* pastikan di atas */
   }
 
   .nav-links.active {
-    max-height: 500px; /* cukup tinggi untuk menampilkan semua menu */
+    max-height: 500px;
   }
 }
+
 
 /* ======================================
    HERO
