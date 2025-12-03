@@ -1,7 +1,12 @@
+
+/* ======================================
+   NAVBAR
+====================================== */
 /* --- Global --- */
-* { margin:0;
+* { 
+   margin:0; 
    padding:0; 
-   box-sizing:border-box; 
+   box-sizing:border-box;
    font-family: 'Segoe UI', sans-serif;
   }
 :root {
@@ -11,16 +16,12 @@
    --accent-glow:rgb(65,141,255); 
    --text:#fff;
 }
-body { background: var(--dark-bg); 
-      color: var(--text); line-height:1.6;
-      overflow-x:hidden; 
-     }
-
-
-/* ======================================
-   NAVBAR
-====================================== */
-
+body { 
+   background: var(--dark-bg);
+   color: var(--text); 
+   line-height:1.6; 
+   overflow-x:hidden; 
+}
 
 /* --- Navbar --- */
 .navbar 
