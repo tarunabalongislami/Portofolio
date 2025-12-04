@@ -39,7 +39,7 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
-  background: #111;
+  background: #002981;
   position: fixed;
   top: 0;
   width: 100%;
@@ -90,7 +90,7 @@ section {
     top: 70px;
     right: 5%;
     width: 90%;
-    background: #111;
+    background: #001058;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease-in-out;
@@ -169,7 +169,7 @@ section {
   display: inline-block;
   padding: 1rem 2.5rem;
   background: linear-gradient(45deg, var(--accent), #003afa);
-  color: white;
+  color: rgb(255, 0, 0);
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
@@ -356,7 +356,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(41, 108, 253, 0.05);
+  background: rgba(50, 4, 255, 0.05);
   border: 1px solid rgba(17, 70, 243, 0.15);
   backdrop-filter: blur(5px);
   color: var(--text);
@@ -380,7 +380,7 @@ footer {
   background: var(--darker-bg);
   padding: 3rem 5%;
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgb(8, 4, 230);
 }
 
 /* ======================================
