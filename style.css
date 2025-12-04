@@ -1,36 +1,88 @@
-/* --- Global --- */
-* { margin:0;
-   padding:0; 
-   box-sizing:border-box; 
-   font-family: 'Segoe UI', sans-serif;
-  }
-:root {
-  --dark-bg:#141414; --darker-bg:#050505; --accent:#2462e9; --accent-glow:rgb(65,141,255); --text:#fff;
+/* ======================================
+   GLOBAL
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
-body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow-x:hidden; }
 
+:root {
+  --dark-bg: #141414;
+  --darker-bg: #050505;
+  --accent: #2462e9;
+  --accent-glow: rgb(65,141,255);
+  --text: #fff;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
 
 /* ======================================
    NAVBAR
 ====================================== */
-/* --- Global --- */
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
-:root {
-  --dark-bg:#141414; --darker-bg:#050505; --accent:#2462e9; --accent-glow:rgb(65,141,255); --text:#fff;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #111;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
-body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow-x:hidden; }
 
-/* --- Navbar --- */
-.navbar { display:flex; justify-content:space-between; align-items:center; padding:15px 5%; background:#111; position:fixed; top:0; width:100%; z-index:1000;}
-.navbar .logo { color:#fff; text-decoration:none; font-weight:bold; font-size:1.2rem; }
-.nav-links { list-style:none; display:flex; gap:25px;}
-.nav-links li a { color:#fff; text-decoration:none; font-weight:500;}
-.nav-links a.active { color:var(--accent);}
-.nav-toggle { display:none; background:none; border:none; cursor:pointer; color:#fff; font-size:1.7rem;}
+.navbar .logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
-/* Hamburger & Responsive */
-@media(max-width:768px){
-  .nav-toggle { display:block; }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+/* MOBILE NAVBAR */
+@media(max-width: 768px){
+  .nav-toggle {
+    display: block;
+  }
 
   .nav-links {
     flex-direction: column;
@@ -40,14 +92,17 @@ body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow
     width: 90%;
     background: #111;
     overflow: hidden;
-    max-height: 0;             /* awalnya tertutup */
+    max-height: 0;
     transition: max-height 0.5s ease-in-out;
     border-radius: 10px;
     gap: 15px;
+    padding: 0 20px;
+    display: flex; /* FIX: tetap flex, tidak hilang */
   }
 
   .nav-links.active {
-    max-height: 500px; /* cukup tinggi untuk menampilkan semua menu */
+    max-height: 500px;
+    padding: 20px;
   }
 }
 
@@ -263,7 +318,6 @@ body { background: var(--dark-bg); color: var(--text); line-height:1.6; overflow
   border: none;
 }
 
-/* Tombol Download */
 .download-btn {
   display: block;
   text-align: center;
@@ -330,20 +384,7 @@ footer {
 }
 
 /* ======================================
-   SCROLL & ACTIVE LINK
-====================================== */
-html { scroll-behavior: smooth; }
-section { scroll-margin-top: 90px; }
-
-.nav-links a.active {
-  color: var(--accent);
-}
-.nav-links a.active::after {
-  width: 100%;
-}
-
-/* ======================================
-   RESPONSIVE SECTION
+   RESPONSIVE
 ====================================== */
 @media(max-width: 992px) {
   .certificate-grid {
@@ -374,10 +415,6 @@ section { scroll-margin-top: 90px; }
     height: 280px;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   .logo {
     font-size: 1.5rem;
   }
@@ -391,7 +428,7 @@ section { scroll-margin-top: 90px; }
   }
 
   .skills-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
